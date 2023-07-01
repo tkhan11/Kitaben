@@ -122,12 +122,24 @@ st.write('Kitaben is an online platform that allows users to share and read book
 userid = st.sidebar.text_input("User-ID", placeholder="Currently logged in as Guest ")
 log_in_clicked = st.sidebar.button("Log In")
 if log_in_clicked:
-  if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
-    t.select_user(int(userid))
-  elif userid.isdigit() and int(userid) in df_users['User-ID'].unique():
-    t.welcome_user()
-  else:
-    t.wrong_credentials()
+	if userid.isalnum():
+		if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
+			t.select_user(int(userid))
+	elif userid.isdigit() and int(userid) in df_users['User-ID'].unique():
+		t.welcome_user()
+	elif userid.isalpha() and userid in df_books_ratings['User-ID'].unique():
+		t.select_user(userid)
+	elif userid.isalpha() and userid in df_users['User-ID'].unique():
+		t.welcome_user()
+	else:
+		t.wrong_credentials()
+# if log_in_clicked:
+#   if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
+#     t.select_user(int(userid))
+#   elif userid.isdigit() and int(userid) in df_users['User-ID'].unique():
+#     t.welcome_user()
+#   else:
+#     t.wrong_credentials()
 
 # friendid = st.sidebar.text_input("Let's find your friends!", placeholder="[277427, 278026, 277523, 276680]")
 # add_clicked = st.sidebar.button("Add")
