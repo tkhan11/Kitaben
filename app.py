@@ -118,20 +118,20 @@ st.write('Kitaben is an online platform that allows users to share and read book
           Finally, the last set of recommendations are based on users that have rated common books with the ones that you choose.')
 
 
-# Define the sidebar buttons / text inputs
-userid = st.sidebar.text_input("User-ID", placeholder="Currently logged in as Guest ")
-log_in_clicked = st.sidebar.button("Log In")
-if log_in_clicked:
-	if userid.isalnum():
-		if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
-			t.select_user(int(userid))
-	elif userid.isdigit() and int(userid) in df_users['User-ID'].unique():
-		t.welcome_user()
-	elif userid.isalpha() and userid in df_books_ratings['User-ID'].unique():
-		t.select_user(userid)
-	elif userid.isalpha() and userid in df_users['User-ID'].unique():
-		t.welcome_user()
-	else:
+# # Define the sidebar buttons / text inputs
+# userid = st.sidebar.text_input("User-ID", placeholder="Currently logged in as Guest ")
+# log_in_clicked = st.sidebar.button("Log In")
+# if log_in_clicked:
+# 	if userid.isalnum():
+# 		if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
+# 			t.select_user(int(userid))
+# 	elif userid.isdigit() and int(userid) in df_users['User-ID'].unique():
+# 		t.welcome_user()
+# 	elif userid.isalpha() and userid in df_books_ratings['User-ID'].unique():
+# 		t.select_user(userid)
+# 	elif userid.isalpha() and userid in df_users['User-ID'].unique():
+# 		t.welcome_user()
+# 	else:
 		t.wrong_credentials()
 # if log_in_clicked:
 #   if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
