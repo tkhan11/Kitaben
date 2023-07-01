@@ -132,7 +132,7 @@ st.write('Kitaben is an online platform that allows users to share and read book
 # 	elif userid.isalpha() and userid in df_users['User-ID'].unique():
 # 		t.welcome_user()
 # 	else:
-		t.wrong_credentials()
+		# t.wrong_credentials()
 # if log_in_clicked:
 #   if userid.isdigit() and int(userid) in df_books_ratings['User-ID'].unique():
 #     t.select_user(int(userid))
