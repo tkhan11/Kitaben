@@ -28,7 +28,7 @@ if 'Friends' not in st.session_state:
 
 # show the consent message only the first time
 if 'Consent' not in st.session_state:
-  st.info('Kitaben respects your data. Our policy complies with the GDPR. We use pseudonymisation and encryption to collect your personal data and to use them \
+  st.info('kitaaben respects your data. Our policy complies with the GDPR. We use pseudonymisation and encryption to collect your personal data and to use them \
           only for recommendations purposes. By clicking ok you consent to these terms ')
   data_consent_button = st.button("Ok")
   placeholder = st.empty()
@@ -114,10 +114,10 @@ df = rs.head(10)
 print(df)
 t.recommendations(df)
 
-st.subheader('About Kitaben')
-st.write('Kitaben is an online platform that allows users to share and read books by connecting with other users from the platform. \
+st.subheader('About kitaaben')
+st.write('kitaaben is an online platform that allows users to share and read books by connecting with other users from the platform. \
           The first set of recommendations that you see are based on your previous books and suggest your favorite authors. If there are no previous readings of yours, random authors are chosen. \
-          The second set of recommendations are based on your Kitaben users list. If the list is empty, it is initialized by some random users. \
+          The second set of recommendations are based on your kitaaben users list. If the list is empty, it is initialized by some random users. \
           Finally, the last set of recommendations are based on users that have rated common books with the ones that you choose.')
 
 

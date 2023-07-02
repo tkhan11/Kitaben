@@ -39,7 +39,7 @@ def wrong_credentials():
   st.sidebar.write(' User not found 😢')
 
 def welcome_user():
-  st.sidebar.write('Welcome to Kitaben! 🥳 ')
+  st.sidebar.write('Welcome to kitaaben! 🥳 ')
   st.sidebar.write('Start reading books to get more personalised recommendations 🧐')
   
 # def already_added():
